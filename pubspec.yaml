@@ -1,0 +1,68 @@
+name: sber_portal_clock
+description: Digital clock for SberPortal (Android TV)
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.1.0+1
+
+environment:
+  sdk: '>=2.18.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # DI + StateManagement
+  get: ^4.6.5  # DI + StateManagement
+
+  # Контейнер (рамка) для виджетов для управления с пульта
+  dpad_container: ^1.0.1
+
+  # Плагин для работы со временем и датами
+  intl: ^0.18.0
+
+  # Плагин для работы с параметрами экрана
+  screen_brightness: ^0.2.2
+
+  # Автосоздание иконок для приложения
+  flutter_launcher_icons: ^0.11.0
+
+  # Apple иконки
+  cupertino_icons: ^1.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.1
+
+
+flutter_icons:
+  android: "ic_launcher"
+  ios: false
+  image_path: "assets/icon_1024.png"
+
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  fonts:
+    - family: Digital
+      fonts:
+        - asset: fonts/digital-dismay.otf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    - family: DigitalDream
+      fonts:
+        - asset: fonts/digital_dream.ttf
+    #       - asset: fonts/TrajanPro_Bold.ttf
+    #         weight: 700
+    - family: WhiteRabbit
+      fonts:
+        - asset: fonts/white_rabbit.ttf
