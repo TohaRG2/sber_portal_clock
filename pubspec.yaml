@@ -18,7 +18,7 @@ dependencies:
   dpad_container: ^1.0.1
 
   # Плагин для работы со временем и датами
-  intl: ^0.18.0
+  jiffy: ^5.0.0
 
   # Плагин для работы с параметрами экрана
   screen_brightness: ^0.2.2

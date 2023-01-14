@@ -1,13 +1,18 @@
+import 'dart:math';
+
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:sber_portal_clock/main_screen/logic.dart';
+import 'package:sber_portal_clock/utils/my_logger.dart';
 
 class TextSizeRegulator extends GetView<MainScreenLogic> {
   const TextSizeRegulator({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var state = controller.timeState;
+    var state = controller.screenState;
+    var maxDelta = (min(Get.width, Get.height) - 200) / 2;
+    // logPrint('wigth = ${Get.width}, height = ${Get.height}, min = ${min(Get.width, Get.height)} maxDelta = $maxDelta');
     return Obx(() {
       return SliderTheme(
         data: const SliderThemeData(
@@ -22,12 +27,12 @@ class TextSizeRegulator extends GetView<MainScreenLogic> {
           child: Container(
             padding: const EdgeInsets.all(20),
             child: Slider(
-              value: state.fontSize.value,
+              value: maxDelta - state.timeMargin.value,
               onChanged: (value) {
-                state.fontSize.value = value;
+                state.timeMargin.value = maxDelta - value;
               },
-              min: 150,
-              max: 500,
+              min: 0,
+              max: maxDelta,
             ),
           ),
         ),

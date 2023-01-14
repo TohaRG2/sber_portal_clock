@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 import 'package:screen_brightness/screen_brightness.dart';
 
-import '../utils/my_logger.dart';
+import '../../utils/my_logger.dart';
 
 class MainScreenState {
+  RxDouble timeMargin = 100.0.obs;
+  RxBool isTimeFocused = false.obs;
+
   final RxDouble _bright = 0.01.obs;
   get bright => _bright.value;
   set bright(val) {
@@ -24,8 +27,7 @@ class MainScreenState {
       // logPrint('try change brightness to $brightness');
       await ScreenBrightness().setScreenBrightness(brightness);
     } catch (e) {
-      print(e.toString());
-      throw 'Failed to set brightness';
+      logPrintErr('Failed to set brightness - $e');
     }
   }
 

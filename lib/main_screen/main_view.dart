@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sber_portal_clock/main_screen/widgets/regulators_row.dart';
 
 import 'logic.dart';
-import 'widgets/brightness_regulator.dart';
-import 'widgets/text_size_regulator.dart';
 import 'widgets/time_widget.dart';
 
 class MainScreenPage extends StatelessWidget {
@@ -16,19 +15,12 @@ class MainScreenPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
-        children: [
-          const Center(child: TimeWidget()),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                TextSizeRegulator(),
-                BrightnessRegulator(),
-              ],
-            ),
-          ),
+        children: const [
+          TimeWidget(),
+          RegulatorsWidget(),
         ],
       ),
     );
   }
 }
+
