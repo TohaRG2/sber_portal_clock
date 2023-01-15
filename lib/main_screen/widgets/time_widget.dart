@@ -20,10 +20,18 @@ class TimeWidget extends GetView<MainScreenLogic> {
           child: Column(
             children: [
               Text(
+                timeState.weekDay,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 130,
+                ),
+              ),
+              Text(
                 timeState.time,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 700,
+                  fontSize: 600,
                   fontFamily: 'Digital',
                   // fontFamily: 'WhiteRabbit',
                 ),
@@ -32,7 +40,8 @@ class TimeWidget extends GetView<MainScreenLogic> {
                 timeState.date,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 120,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 130,
                 ),
               )
             ],
@@ -42,3 +51,5 @@ class TimeWidget extends GetView<MainScreenLogic> {
     });
   }
 }
+
+

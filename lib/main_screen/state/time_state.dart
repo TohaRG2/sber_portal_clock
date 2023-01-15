@@ -8,8 +8,11 @@ class TimeState {
   final RxString _time = '00:00:00'.obs;
   get time => _time.value;
 
-  final RxString _date = '1 января, ПН'.obs;
+  final RxString _date = '01.01.2023'.obs;
   get date => _date.value;
+
+  final RxString _weekDay = 'ПН'.obs;
+  get weekDay => _weekDay.value;
 
   TimeState() {
     _timeTicker();
@@ -20,7 +23,8 @@ class TimeState {
     while (true) {
       var now = DateTime.now();
       _time.value = Jiffy(now).format('HH:mm');
-      _date.value = Jiffy(now).format('dd MMMM y, E');
+      _date.value = Jiffy(now).format('dd.MM.yy');
+      _weekDay.value = Jiffy(now).format('EEEE');
       await Future.delayed(const Duration(milliseconds: 500), () {});
     }
   }

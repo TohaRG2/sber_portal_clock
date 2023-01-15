@@ -11,7 +11,7 @@ class TextSizeRegulator extends GetView<MainScreenLogic> {
   @override
   Widget build(BuildContext context) {
     var state = controller.screenState;
-    var maxDelta = (min(Get.width, Get.height) - 200) / 2;
+    var maxDelta = (min(Get.width, Get.height) - 100) / 2;
     // logPrint('wigth = ${Get.width}, height = ${Get.height}, min = ${min(Get.width, Get.height)} maxDelta = $maxDelta');
     return Obx(() {
       return SliderTheme(
