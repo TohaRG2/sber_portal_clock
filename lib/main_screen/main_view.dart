@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sber_portal_clock/main_screen/widgets/color_regulator.dart';
 import 'package:sber_portal_clock/main_screen/widgets/regulators_row.dart';
 
 import 'logic.dart';
@@ -18,6 +19,7 @@ class MainScreenPage extends StatelessWidget {
         children: const [
           TimeWidget(),
           RegulatorsWidget(),
+          ColorRegulator(),
         ],
       ),
     );

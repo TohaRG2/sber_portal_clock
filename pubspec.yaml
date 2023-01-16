@@ -24,7 +24,10 @@ dependencies:
   screen_brightness: ^0.2.2
 
   # Автосоздание иконок для приложения
-  flutter_launcher_icons: ^0.11.0
+#  flutter_launcher_icons: ^0.11.0
+
+  # Заставка при загрузке
+  flutter_native_splash: ^2.2.17
 
   # Apple иконки
   cupertino_icons: ^1.0.5
@@ -41,6 +44,8 @@ flutter_icons:
   ios: false
   image_path: "assets/icon_1024.png"
 
+flutter_native_splash:
+  color: "#000000"
 
 # The following section is specific to Flutter packages.
 flutter:

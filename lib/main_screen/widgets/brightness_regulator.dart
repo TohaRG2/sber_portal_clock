@@ -14,7 +14,7 @@ class BrightnessRegulator extends GetView<MainScreenLogic> {
           trackHeight: 80,
           activeTrackColor: Colors.transparent,
           inactiveTrackColor: Colors.transparent,
-          thumbColor: Colors.white10,
+          thumbColor: Colors.white24,
         ),
         child: RotatedBox(
           quarterTurns: 3,
