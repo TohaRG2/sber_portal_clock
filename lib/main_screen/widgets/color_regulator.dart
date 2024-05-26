@@ -15,11 +15,11 @@ class ColorRegulator extends GetView<MainScreenLogic> {
       right: 100,
       child: Obx(() {
         return SliderTheme(
-          data: SliderThemeData(
+          data: const SliderThemeData(
             trackHeight: 2,
             activeTrackColor: Colors.transparent,
             inactiveTrackColor: Colors.transparent,
-            thumbColor: Colors.white24,
+            thumbColor: Colors.transparent,
             overlayColor: Colors.white54,
           ),
           child: Slider(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sber_portal_clock/main_screen/logic.dart';
-import 'package:sber_portal_clock/utils/my_logger.dart';
 
 class TimeWidget extends GetView<MainScreenLogic> {
   const TimeWidget({super.key});
@@ -24,23 +23,27 @@ class TimeWidget extends GetView<MainScreenLogic> {
                 style: TextStyle(
                   color: screenState.mainColor,
                   fontWeight: FontWeight.w600,
+                  // fontFamily: 'Digital7',
                   fontSize: 130,
                 ),
               ),
+              const SizedBox(height: 100,),
               Text(
                 timeState.time,
                 style: TextStyle(
                   color: screenState.mainColor,
                   fontSize: 600,
-                  fontFamily: 'Digital',
+                  fontFamily: 'DigitalDisp',
                   // fontFamily: 'WhiteRabbit',
                 ),
               ),
+              const SizedBox(height: 100,),
               Text(
                 timeState.date,
                 style: TextStyle(
                   color: screenState.mainColor,
                   fontWeight: FontWeight.w600,
+                  // fontFamily: 'DigitalMono',
                   fontSize: 130,
                 ),
               )

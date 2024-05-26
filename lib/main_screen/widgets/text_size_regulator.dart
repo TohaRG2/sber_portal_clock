@@ -19,7 +19,7 @@ class TextSizeRegulator extends GetView<MainScreenLogic> {
           trackHeight: 80,
           activeTrackColor: Colors.transparent,
           inactiveTrackColor: Colors.transparent,
-          thumbColor: Colors.white24,
+          thumbColor: Colors.transparent,
           overlayColor: Colors.white54,
         ),
         child: RotatedBox(

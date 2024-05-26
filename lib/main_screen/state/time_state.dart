@@ -14,18 +14,25 @@ class TimeState {
   final RxString _weekDay = 'ПН'.obs;
   get weekDay => _weekDay.value;
 
+  bool showColon = true;
+
   TimeState() {
     _timeTicker();
   }
 
   _timeTicker() async {
-    await Jiffy.locale("ru");
+    await Jiffy.setLocale("ru");
     while (true) {
-      var now = DateTime.now();
-      _time.value = Jiffy(now).format('HH:mm');
-      _date.value = Jiffy(now).format('dd.MM.yy');
-      _weekDay.value = Jiffy(now).format('EEEE');
-      await Future.delayed(const Duration(milliseconds: 500), () {});
+      // var now = DateTime.now();
+      // if (showColon) {
+        _time.value = Jiffy.now().format(pattern: 'HH:mm');
+      // } else {
+      //   _time.value = Jiffy(now).format('HH mm');
+      // }
+      // showColon = !showColon;
+      _date.value = Jiffy.now().format(pattern:'dd.MM.yy');
+      _weekDay.value = Jiffy.now().format(pattern: 'EEEE');
+      await Future.delayed(const Duration(milliseconds: 1000), () {});
     }
   }
 

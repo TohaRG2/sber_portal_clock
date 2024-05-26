@@ -12,16 +12,16 @@ dependencies:
     sdk: flutter
 
   # DI + StateManagement
-  get: ^4.6.5  # DI + StateManagement
+  get: ^4.6.6
 
   # Контейнер (рамка) для виджетов для управления с пульта
-  dpad_container: ^1.0.1
+  dpad_container: ^2.0.4
 
   # Плагин для работы со временем и датами
-  jiffy: ^5.0.0
+  jiffy: ^6.3.1
 
   # Плагин для работы с параметрами экрана
-  screen_brightness: ^0.2.2
+  screen_brightness: ^1.0.1
 
   # Автосоздание иконок для приложения
 #  flutter_launcher_icons: ^0.11.0
@@ -30,13 +30,13 @@ dependencies:
   flutter_native_splash: ^2.2.17
 
   # Apple иконки
-  cupertino_icons: ^1.0.5
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.1
+  flutter_lints: ^4.0.0
 
 
 flutter_icons:
@@ -71,3 +71,15 @@ flutter:
     - family: WhiteRabbit
       fonts:
         - asset: fonts/white_rabbit.ttf
+    - family: Digital7
+      fonts:
+        - asset: fonts/digital_7.ttf
+    - family: DigitalMono
+      fonts:
+        - asset: fonts/digital-7_mono.ttf
+    - family: PocketCalc
+      fonts:
+        - asset: fonts/pocket_calc.ttf
+    - family: DigitalDisp
+      fonts:
+        - asset: fonts/digital_display.ttf
